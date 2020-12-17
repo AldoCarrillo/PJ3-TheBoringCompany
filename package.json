@@ -6,7 +6,6 @@
   },
   "description": "Mern Demo",
   "private": true,
-  "proxy": "http://localhost:4000",
   "dependencies": {
     "@date-io/date-fns": "^2.10.6",
     "@material-ui/core": "^4.11.1",
@@ -15,6 +14,7 @@
     "@material-ui/pickers": "^3.2.10",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
+    "date-fns": "^2.16.1",
     "material-ui": "^0.20.2",
     "material-ui-image": "^3.3.0",
     "materialize-css": "^1.0.0-rc.2",
@@ -29,11 +29,10 @@
     "styles": "^0.2.1"
   },
   "scripts": {
-    "local": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "start": "node ./backend/server.js",
     "heroku-postbuild": "npm run build"
   },
   "browserslist": [
