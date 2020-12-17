@@ -9,13 +9,12 @@ const PORT = process.env.PORT || 3000;
 dotenv.config();
 
 //mongoose.connect(process.env.DATABASE_ACCESS, () => console.log('DataBase Connected'));
-
+// 'mongodb://localhost/Company-App'
 mongoose
-	.connect('mongodb://localhost/Company-App', {
+	.connect(process.env.MONGODB_URI, {
 		useCreateIndex: true,
 		useUnifiedTopology: true,
-		useNewUrlParser: true,
-		useFindAndModify: false
+		useNewUrlParser: true
 	})
 	.then((db) => console.log('DB is connected'));
 
